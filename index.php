@@ -3,17 +3,36 @@
 require_once 'ClassAutoLoad.php';
 
 //Display the header
-$layout->header($conf);
-//Call the greet method
-print $hello->greet();
-//Call the today method
-print $hello->today();
+$Layout->header($conf);
+// Call methods with try-catch for better error handling
+try {
+    // Call the greet method
+    if (isset($hello) && method_exists($hello, 'greet')) {
+        print $hello->greet();
+    } else {
+        throw new Exception("Greet method not available");
+    }
+} catch (Exception $e) {
+    error_log("Error calling greet(): " . $e->getMessage());
+    print "Hello!";
+}
 
+try {
+    // Call the today method
+    if (isset($hello) && method_exists($hello, 'today')) {
+        print $hello->today();
+    } else {
+        throw new Exception("Today method not available");
+    }
+} catch (Exception $e) {
+    error_log("Error calling today(): " . $e->getMessage());
+    print date('l, F j, Y'); // Formatted default date
+}
 // Add a link to View Registered Users
 print'<p><a href="users.php">View Registered Users</a></p>';
 
 //Display the signup forms
-$form->signup();
+$Form->Signup();
 
-$layout->footer($conf);
+$Layout->footer($conf);
 
