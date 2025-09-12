@@ -39,6 +39,5 @@ if ($conn->query($sql)) {
     echo "Error creating table: " . $conn->error . "<br>";
 }
 
-$conn->close();
 echo "Database setup complete!";
 ?>

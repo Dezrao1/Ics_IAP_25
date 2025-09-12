@@ -14,7 +14,7 @@ try {
     }
 } catch (Exception $e) {
     error_log("Error calling greet(): " . $e->getMessage());
-    print "Hello!";
+    print "Shallom, We would like to invite you to the ICS C Community as on ";
 }
 
 try {

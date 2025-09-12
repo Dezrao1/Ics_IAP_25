@@ -1,6 +1,6 @@
 <?php
 // process_signup.php
-require_once 'db.php';
+require_once 'Services/db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['username'])) {
     $username = trim($_POST['username']);

@@ -1,6 +1,6 @@
 <?php
 // users.php
-require_once 'db.php';
+require_once 'Services/db.php';
 
 $sql = "SELECT username, email, created_at FROM users ORDER BY username ASC";
 $result = $conn->query($sql);

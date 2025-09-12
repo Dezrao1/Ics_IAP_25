@@ -14,7 +14,6 @@ class forms {
       <br>
       <input type="submit" value="Sign Up">
   </form>
-
   <form method="post" action="process_signup.php">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
@@ -26,10 +25,11 @@ class forms {
     <input type="password" id="password" name="password" required>
     <br>
     <input type="submit" value="Sign Up">
-  </form>
+</form>
 <?php
     
-  }
+
+    }
     
     public function Login() {
         ?>
