@@ -5,7 +5,8 @@ class classes {
         return "<h1>Hello, ICS C Community!</h1>";
     }
 
-    public function today() {
-        return "<p>Today is " . date("l") . "</p>";
+  public function today() {
+        return "<p>Today is " . date("l, F j, Y") . "</p>";
     }
 }
+?>
