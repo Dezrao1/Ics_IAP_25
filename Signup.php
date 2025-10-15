@@ -1,5 +1,5 @@
 <?php
-class forms {
+class Forms {
   public function Signup() {
 ?> 
   <form method="post" action="mail.php">
